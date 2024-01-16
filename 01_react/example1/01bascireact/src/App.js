@@ -1,6 +1,10 @@
+import Firstreact from "./Firstbasicreact";
 function App() {
   return (
-   <h1>Hello React</h1>
+   <>
+   <Firstreact/>
+   <p>hello All...</p>
+   </>
   );
 }
 

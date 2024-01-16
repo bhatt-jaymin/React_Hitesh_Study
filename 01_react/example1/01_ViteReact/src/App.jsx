@@ -1,8 +1,14 @@
-function App() {
+import Reactvite1 from "./Reactvite";
 
+function App() {
   return (
-   <h1>Welcome to Vite React World</h1>
-  )
+    //fragment start
+    <>
+      <Reactvite1 />
+      <h3><p>Simple Example of the React Vite</p></h3>
+    </>
+    //fragment End
+  );
 }
 
-export default App
+export default App;

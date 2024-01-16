@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'; // Core foundation library in react
+import ReactDOM from 'react-dom/client'; // Using by default above 2 libraries in react
 import App from './App';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// ReactDom is virtual Dom create by own way
+const root = ReactDOM.createRoot(document.getElementById('root')); // root is variable in index.js
 root.render(
-  <React.StrictMode>
+ 
     <App />
-  </React.StrictMode>
+  
 );
 
 
