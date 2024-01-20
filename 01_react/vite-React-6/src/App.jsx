@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect,useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
   const [lengthpasswordCount, setLengthPasswordCount] = useState(8);
@@ -6,9 +6,9 @@ function App() {
   const [specialCharacterAllowed, setspecialCharacterAllowed] = useState(false);
   const [password, setpassword] = useState("");
 
-// useRef hook
+  // useRef hook
 
-const passwordRefHook=useRef(null)
+  const passwordRefHook = useRef(null);
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -33,9 +33,8 @@ const passwordRefHook=useRef(null)
     passwordRefHook.current?.select();
     window.navigator.clipboard.writeText(password);
     alert("Password copied to clipboard!");
-    console.log('Password copied to clipboard!');
+    console.log("Password copied to clipboard!");
   }, [password]);
-
 
   useEffect(() => {
     passwordGenerator();
@@ -44,7 +43,6 @@ const passwordRefHook=useRef(null)
     numberAllowed,
     specialCharacterAllowed,
     passwordGenerator,
-   
   ]);
   return (
     <>
@@ -58,12 +56,14 @@ const passwordRefHook=useRef(null)
             className="outline-none w-full py-1 px-3 text-center text-bold rounded-lg"
             placeholder="Password"
             readOnly
-            ref={passwordRefHook}   
+            ref={passwordRefHook}
           />
 
-          <button onClick={copyPwdClipbrd} className="outline-4 text-red-700 bg-blue-500 px-3 py-0.5 flex-shrink-4 my-3 rounded-md" >
+          <button
+            onClick={copyPwdClipbrd}
+            className="outline-4 text-red-700 bg-blue-500 px-3 py-0.5 flex-shrink-4 my-3 rounded-md"
+          >
             Copy
-           
           </button>
         </div>
         <div className="flex text-sm gap-x-2">
