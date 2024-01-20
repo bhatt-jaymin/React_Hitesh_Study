@@ -53,7 +53,7 @@ const passwordRefHook=useRef(null)
             className="outline-none w-full py-1 px-3 text-center text-bold rounded-lg"
             placeholder="Password"
             readOnly
-            ref={passwordRefHook}  
+            ref={passwordRefHook}   
           />
 
           <button onClick={copyPwdClipbrd} className="outline-4 text-red-700 bg-blue-500 px-3 py-0.5 flex-shrink-4 my-3 rounded-md">
